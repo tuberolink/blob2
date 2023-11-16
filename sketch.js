@@ -157,7 +157,7 @@ function draw() {
     */
     var temp_blobs = myVida.getBlobs();
     // define size of the drawing
-    var temp_w = width; var temp_h = height;
+    var temp_w = width; var temp_h = height*0.9;
     // offset from the upper left corner
     var offset_x = 0; var offset_y = 0;
     // pixel-based blob coords
@@ -209,6 +209,7 @@ function draw() {
       ellipse(temp_mass_center_x, temp_mass_center_y, 3, 3);
       // print id
       noStroke(); fill(255, 255 , 0);
+      textSize(5);
       text(temp_blobs[i].id, temp_rect_x, temp_rect_y - 1);
       // draw approximated polygon (if available)
       strokeWeight(4); stroke(255, 0, 0); noFill();
