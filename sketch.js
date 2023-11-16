@@ -232,3 +232,28 @@ function draw() {
     background(255, 0, 0);
   }
 }
+
+
+
+  Helper function that starts playback on browsers that require interaction
+  with the user before playing video files.
+*/
+function safeStartVideo() {
+  // safety first..
+  if(myVideo === null || myVideo === undefined) return;
+  // here we check if the video is already playing...
+  if(!isNaN(myVideo.time())) {
+    if(myVideo.time() < 1) {
+      interactionStartedFlag = true;
+      return;
+    }
+  }
+  // if no, we will try to play it
+  try {
+    myVideo.loop(); myVideo.hide();
+    interactionStartedFlag = true;
+  }
+  catch(e) {
+    console.log('[safeStartVideo] ' + e);
+  }
+}
