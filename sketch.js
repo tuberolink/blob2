@@ -133,7 +133,7 @@ function draw() {
     //image(myVida.currentImage, 0, 0);
     //image(myVida.backgroundImage, 320, 0);
     //image(myVida.differenceImage, 0, 240);
-    //image(myVida.thresholdImage, 20, 240);
+    image(myVida.thresholdImage, 20, 240);
     // let's also describe the displayed images
     //noStroke(); fill(255, 255, 255);
     //text('camera', 20, 20);
@@ -202,7 +202,7 @@ function draw() {
       temp_mass_center_x = Math.floor(temp_blobs[i].normMassCenterX * temp_w);
       temp_mass_center_y = Math.floor(temp_blobs[i].normMassCenterY * temp_h);
       // draw bounding box
-      strokeWeight(3); stroke(255, 255, 0); noFill();
+      strokeWeight(5); stroke(255, 255, 0); noFill();
       rect(temp_rect_x, temp_rect_y, temp_rect_w, temp_rect_h);
       // draw mass center
       noStroke(); fill(255, 0 , 0); ellipseMode(CENTER);
@@ -211,7 +211,7 @@ function draw() {
       noStroke(); fill(255, 255 , 0);
       text(temp_blobs[i].id, temp_rect_x, temp_rect_y - 1);
       // draw approximated polygon (if available)
-      strokeWeight(3); stroke(255, 0, 0); noFill();
+      strokeWeight(1); stroke(255, 0, 0); noFill();
       beginShape();
       for(var j = 0; j < temp_blobs[i].approximatedPolygon.length; j++) {
         vertex(
@@ -232,32 +232,3 @@ function draw() {
     background(255, 0, 0);
   }
 }
-/*
-function touchEnded() {
-  // init video (if needed)
-  if(!interactionStartedFlag) safeStartVideo();
-}
-/*
-  Helper function that starts playback on browsers that require interaction
-  with the user before playing video files.
-*/
-/*function safeStartVideo() {
-  // safety first..
-  if(myVideo === null || myVideo === undefined) return;
-  // here we check if the video is already playing...
-  if(!isNaN(myVideo.time())) {
-    if(myVideo.time() < 1) {
-      interactionStartedFlag = true;
-      return;
-    }
-  }
-  // if no, we will try to play it
-  try {
-    myVideo.loop(); myVideo.hide();
-    interactionStartedFlag = true;
-  }
-  catch(e) {
-    console.log('[safeStartVideo] ' + e);
-  }
-}
-*/
