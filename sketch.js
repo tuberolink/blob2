@@ -232,7 +232,7 @@ function draw() {
     background(255, 0, 0);
   }
 }
-
+/*
 function touchEnded() {
   // init video (if needed)
   if(!interactionStartedFlag) safeStartVideo();
@@ -241,7 +241,7 @@ function touchEnded() {
   Helper function that starts playback on browsers that require interaction
   with the user before playing video files.
 */
-function safeStartVideo() {
+/*function safeStartVideo() {
   // safety first..
   if(myVideo === null || myVideo === undefined) return;
   // here we check if the video is already playing...
@@ -260,3 +260,4 @@ function safeStartVideo() {
     console.log('[safeStartVideo] ' + e);
   }
 }
+*/
