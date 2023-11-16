@@ -20,6 +20,7 @@ function initCaptureDevice() {
 }
 
 function setup() {
+  pixelDensity(1);
   createCanvas(windowWidth, windowHeight); // we need some space...
   initCaptureDevice(); // and access to the camera
 
@@ -112,6 +113,10 @@ function setup() {
   frameRate(30); // set framerate
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   if(myCapture !== null && myCapture !== undefined) { // safety first
     background(0, 0, 255);
@@ -197,7 +202,7 @@ function draw() {
       temp_mass_center_x = Math.floor(temp_blobs[i].normMassCenterX * temp_w);
       temp_mass_center_y = Math.floor(temp_blobs[i].normMassCenterY * temp_h);
       // draw bounding box
-      strokeWeight(1); stroke(255, 255, 0); noFill();
+      strokeWeight(2); stroke(255, 255, 0); noFill();
       rect(temp_rect_x, temp_rect_y, temp_rect_w, temp_rect_h);
       // draw mass center
       noStroke(); fill(255, 0 , 0); ellipseMode(CENTER);
@@ -206,7 +211,7 @@ function draw() {
       noStroke(); fill(255, 255 , 0);
       text(temp_blobs[i].id, temp_rect_x, temp_rect_y - 1);
       // draw approximated polygon (if available)
-      strokeWeight(1); stroke(255, 0, 0); noFill();
+      strokeWeight(2); stroke(255, 0, 0); noFill();
       beginShape();
       for(var j = 0; j < temp_blobs[i].approximatedPolygon.length; j++) {
         vertex(
