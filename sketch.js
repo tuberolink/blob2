@@ -20,7 +20,7 @@ function initCaptureDevice() {
 }
 
 function setup() {
-  pixelDensity(0.5);
+  pixelDensity(1);
   createCanvas(windowWidth, windowHeight); // we need some space...
   initCaptureDevice(); // and access to the camera
 
