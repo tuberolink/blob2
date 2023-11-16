@@ -20,7 +20,7 @@ function initCaptureDevice() {
 }
 
 function setup() {
-  createCanvas(windowWidth / 2, windowHeight / 2); // we need some space...
+  createCanvas(windowWidth, windowHeight); // we need some space...
   initCaptureDevice(); // and access to the camera
 
   /*
