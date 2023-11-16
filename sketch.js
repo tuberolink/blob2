@@ -20,7 +20,7 @@ function initCaptureDevice() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); // we need some space...
+  createCanvas(windowWidth / 2, windowHeight / 2); // we need some space...
   initCaptureDevice(); // and access to the camera
 
   /*
@@ -127,7 +127,7 @@ function draw() {
     */
     //image(myVida.currentImage, 0, 0);
     //image(myVida.backgroundImage, 320, 0);
-    //image(myVida.differenceImage, 0, 240);
+    image(myVida.differenceImage, 0, 240);
     //image(myVida.thresholdImage, 20, 240);
     // let's also describe the displayed images
     //noStroke(); fill(255, 255, 255);
