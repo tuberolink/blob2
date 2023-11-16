@@ -132,7 +132,7 @@ function draw() {
     */
     //image(myVida.currentImage, 0, 0);
     //image(myVida.backgroundImage, 320, 0);
-    image(myVida.differenceImage, 0, 240);
+    //image(myVida.differenceImage, 0, 240);
     //image(myVida.thresholdImage, 20, 240);
     // let's also describe the displayed images
     //noStroke(); fill(255, 255, 255);
@@ -159,7 +159,7 @@ function draw() {
     // define size of the drawing
     var temp_w = width; var temp_h = height*0.9;
     // offset from the upper left corner
-    var offset_x = 0; var offset_y = 0;
+    var offset_x = 0; var offset_y = 100;
     // pixel-based blob coords
     var temp_rect_x, temp_rect_y, temp_rect_w, temp_rect_h,
         temp_mass_center_x, temp_mass_center_y;
