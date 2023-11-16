@@ -234,7 +234,7 @@ function draw() {
 }
 
 
-
+/*
   Helper function that starts playback on browsers that require interaction
   with the user before playing video files.
 */
