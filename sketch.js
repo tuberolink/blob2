@@ -128,7 +128,7 @@ function draw() {
     //image(myVida.currentImage, 0, 0);
     //image(myVida.backgroundImage, 320, 0);
     //image(myVida.differenceImage, 0, 240);
-    //image(myVida.thresholdImage, 20, 240);
+    image(myVida.thresholdImage, 20, 240);
     // let's also describe the displayed images
     //noStroke(); fill(255, 255, 255);
     //text('camera', 20, 20);
