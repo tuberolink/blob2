@@ -209,7 +209,7 @@ function draw() {
       ellipse(temp_mass_center_x, temp_mass_center_y, 3, 3);
       // print id
       noStroke(); fill(255, 255 , 0);
-      textSize(50);
+      textSize(30);
       text(temp_blobs[i].id, temp_rect_x, temp_rect_y - 1);
       // draw approximated polygon (if available)
       strokeWeight(4); stroke(255, 0, 0); noFill();
