@@ -119,7 +119,7 @@ function windowResized() {
 
 function draw() {
   if(myCapture !== null && myCapture !== undefined) { // safety first
-    background(0, 0, 255);
+    background(194, 172, 112);
     /*
       Call VIDA update function, to which we pass the current video frame as a
       parameter. Usually this function is called in the draw loop (once per
@@ -202,7 +202,7 @@ function draw() {
       temp_mass_center_x = Math.floor(temp_blobs[i].normMassCenterX * temp_w);
       temp_mass_center_y = Math.floor(temp_blobs[i].normMassCenterY * temp_h);
       // draw bounding box
-      strokeWeight(5); stroke(255, 255, 0); noFill();
+      strokeWeight(5); stroke(0,0,0); noFill();
       rect(temp_rect_x, temp_rect_y, temp_rect_w, temp_rect_h);
       // draw mass center
       noStroke(); fill(255, 0 , 0); ellipseMode(CENTER);
