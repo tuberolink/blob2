@@ -205,7 +205,7 @@ function draw() {
       strokeWeight(5); stroke(0,0,0); noFill();
       rect(temp_rect_x, temp_rect_y, temp_rect_w, temp_rect_h);
       // draw mass center
-      noStroke(); fill(255, 0 , 0); ellipseMode(CENTER);
+      noStroke(); fill(126, 122 , 235); ellipseMode(CENTER);
       ellipse(temp_mass_center_x, temp_mass_center_y, 3, 3);
       // print id
       noStroke(); fill(255, 255 , 0);
