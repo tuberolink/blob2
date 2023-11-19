@@ -208,11 +208,11 @@ function draw() {
       noStroke(); fill(127, 122 , 235); ellipseMode(CENTER);
       ellipse(temp_mass_center_x, temp_mass_center_y, 3, 3);
       // print id
-      noStroke(); fill(118, 0, 0);
+      noStroke(); fill(117, 0, 0);
       textSize(30);
       text(temp_blobs[i].id, temp_rect_x, temp_rect_y - 1);
       // draw approximated polygon (if available)
-      strokeWeight(4); stroke(255, 0, 0); noFill();
+      strokeWeight(4); stroke(127, 122, 235); noFill();
       beginShape();
       for(var j = 0; j < temp_blobs[i].approximatedPolygon.length; j++) {
         vertex(
