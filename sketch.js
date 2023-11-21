@@ -120,7 +120,7 @@ function windowResized() {
 function draw() {
     
     let r = random(0,255);
-    let g = ramdom(0,255);
+    let g = random(0,255);
     let b = random(0,255);
     
   if(myCapture !== null && myCapture !== undefined) { // safety first
