@@ -217,7 +217,7 @@ function draw() {
       textSize(30);
       text(temp_blobs[i].id, temp_rect_x, temp_rect_y - 1);
       // draw approximated polygon (if available)
-      strokeWeight(4); stroke(127, 122, 235); noFill();
+      strokeWeight(4); stroke(r, g, b); noFill();
       beginShape();
       for(var j = 0; j < temp_blobs[i].approximatedPolygon.length; j++) {
         vertex(
