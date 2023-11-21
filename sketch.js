@@ -118,8 +118,13 @@ function windowResized() {
 }
 
 function draw() {
+    
+    let r = random(0,255);
+    let g = ramdom(0,255);
+    let b = random(0,255);
+    
   if(myCapture !== null && myCapture !== undefined) { // safety first
-    background(194, 172, 112);
+    background(245, 232, 188);
     /*
       Call VIDA update function, to which we pass the current video frame as a
       parameter. Usually this function is called in the draw loop (once per
@@ -205,7 +210,7 @@ function draw() {
       strokeWeight(5); stroke(0,0,0); noFill();
       rect(temp_rect_x, temp_rect_y, temp_rect_w, temp_rect_h);
       // draw mass center
-      noStroke(); fill(127, 122 , 235); ellipseMode(CENTER);
+      noStroke(); fill(r, g , b); ellipseMode(CENTER);
       ellipse(temp_mass_center_x, temp_mass_center_y, 3, 3);
       // print id
       noStroke(); fill(117, 0, 0);
